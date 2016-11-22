@@ -12,14 +12,11 @@ class ViewController: UIViewController {
 
     let RandomNumber1 = arc4random_uniform(5)
     let RandomNumber2 = arc4random_uniform(5)
+   
     
-    var sum = Int ()
     
-    
-    @IBOutlet weak var number1: UILabel!
-    
-    @IBOutlet weak var number2: UILabel!
-    
+    @IBOutlet weak var number1: UITextField!
+    @IBOutlet weak var number2: UITextField!
     @IBOutlet weak var answer: UILabel!
     
     override func viewDidLoad() {
@@ -36,46 +33,266 @@ class ViewController: UIViewController {
     
    
     @IBAction func zeroBtn(_ sender: UIButton) {
+        self.triggerAnswer()
+        
+        if answer.text == "0" {
             answer.text = "0"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+        }
+        
+        
     }
    
     @IBAction func oneBtn(_ sender: UIButton) {
-        answer.text = "1"
+        self.triggerAnswer()
+
+        if answer.text == "1" {
+            answer.text = "1"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
+        
     }
     
     @IBAction func twoBtn(_ sender: UIButton) {
-        answer.text = "2"
+        self.triggerAnswer()
+        
+        if answer.text == "2" {
+            answer.text = "2"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
     }
 
     @IBAction func threeBtn(_ sender: UIButton) {
-        answer.text = "3"
+        self.triggerAnswer()
+        
+        if answer.text == "3" {
+            answer.text = "3"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
+        
     }
 
 
     @IBAction func fourBtn(_ sender: UIButton) {
-        answer.text = "4"
+        self.triggerAnswer()
+        
+        if answer.text == "4" {
+            answer.text = "4"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
+        
     }
 
     @IBAction func fiveBtn(_ sender: UIButton) {
-        answer.text = "5"
+        self.triggerAnswer()
+        
+        if answer.text == "5" {
+            answer.text = "5"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
+        
     }
 
     @IBAction func sixBtn(_ sender: UIButton) {
-        answer.text = "6"
+        self.triggerAnswer()
+        
+        if answer.text == "6" {
+            answer.text = "6"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
+        
     }
     
     @IBAction func sevenBtn(_ sender: UIButton) {
-        answer.text = "7"
+        self.triggerAnswer()
+        
+        if answer.text == "7" {
+            answer.text = "7"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
+
     }
+    
     
     @IBAction func eightBtn(_ sender: UIButton) {
-        answer.text = "8"
+        self.triggerAnswer()
+        
+        if answer.text == "8" {
+            answer.text = "8"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
+        
     }
+    
     
     @IBAction func nineBtn(_ sender: UIButton) {
-        answer.text = "9"
+        self.triggerAnswer()
+        
+        if answer.text == "9" {
+            answer.text = "9"
+        } else {
+            answer.text = "?"
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.answer.alpha = 0.0
+            }, completion: {
+                (finished: Bool) -> Void in
+                
+                //Once the label is completely invisible, set the text and fade it back in
+                self.answer.text = "?"
+                
+                // Fade in
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    self.answer.alpha = 1.0
+                }, completion: nil)
+            })
+
+        }
+        
     }
     
+    func triggerAnswer()  {
+       
+        let leftValue = Int(number1.text!)
+        let rightValue = Int(number2.text!)
+        let result = Int(leftValue! + rightValue!)
+        
+        answer.text = "\(result)"
+        
+    }
 }
 
 
