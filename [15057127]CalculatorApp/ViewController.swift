@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         number1.text = String(RandomNumber1)
         number2.text = String(RandomNumber2)
-        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,10 +33,13 @@ class ViewController: UIViewController {
     
    
     @IBAction func zeroBtn(_ sender: UIButton) {
+        
         self.triggerAnswer()
         
         if answer.text == "0" {
             answer.text = "0"
+            self.performSegue(withIdentifier: "segue", sender: self)
+            
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -59,9 +62,12 @@ class ViewController: UIViewController {
    
     @IBAction func oneBtn(_ sender: UIButton) {
         self.triggerAnswer()
+        
 
         if answer.text == "1" {
             answer.text = "1"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -87,6 +93,8 @@ class ViewController: UIViewController {
         
         if answer.text == "2" {
             answer.text = "2"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -111,6 +119,8 @@ class ViewController: UIViewController {
         
         if answer.text == "3" {
             answer.text = "3"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -137,6 +147,8 @@ class ViewController: UIViewController {
         
         if answer.text == "4" {
             answer.text = "4"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -162,6 +174,8 @@ class ViewController: UIViewController {
         
         if answer.text == "5" {
             answer.text = "5"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -187,6 +201,8 @@ class ViewController: UIViewController {
         
         if answer.text == "6" {
             answer.text = "6"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -212,6 +228,8 @@ class ViewController: UIViewController {
         
         if answer.text == "7" {
             answer.text = "7"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -238,6 +256,8 @@ class ViewController: UIViewController {
         
         if answer.text == "8" {
             answer.text = "8"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -264,6 +284,8 @@ class ViewController: UIViewController {
         
         if answer.text == "9" {
             answer.text = "9"
+            self.performSegue(withIdentifier: "segue", sender: self)
+
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -293,6 +315,18 @@ class ViewController: UIViewController {
         answer.text = "\(result)"
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue"{
+            func performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+    }
+   
+    
+    
+
+   
 }
+
+
 
 
