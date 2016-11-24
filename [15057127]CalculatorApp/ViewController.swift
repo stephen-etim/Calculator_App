@@ -39,8 +39,8 @@ class ViewController: UIViewController {
         if answer.text == "0" {
             answer.text = "0"
             self.performSegue(withIdentifier: "segue", sender: self)
-            
-        } else {
+        
+          } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
                 self.answer.alpha = 0.0
@@ -67,6 +67,7 @@ class ViewController: UIViewController {
         if answer.text == "1" {
             answer.text = "1"
             self.performSegue(withIdentifier: "segue", sender: self)
+
 
         } else {
             answer.text = "?"
@@ -95,6 +96,7 @@ class ViewController: UIViewController {
             answer.text = "2"
             self.performSegue(withIdentifier: "segue", sender: self)
 
+            
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -120,6 +122,8 @@ class ViewController: UIViewController {
         if answer.text == "3" {
             answer.text = "3"
             self.performSegue(withIdentifier: "segue", sender: self)
+            
+
 
         } else {
             answer.text = "?"
@@ -148,6 +152,8 @@ class ViewController: UIViewController {
         if answer.text == "4" {
             answer.text = "4"
             self.performSegue(withIdentifier: "segue", sender: self)
+           
+
 
         } else {
             answer.text = "?"
@@ -202,7 +208,7 @@ class ViewController: UIViewController {
         if answer.text == "6" {
             answer.text = "6"
             self.performSegue(withIdentifier: "segue", sender: self)
-
+            
         } else {
             answer.text = "?"
             UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
@@ -316,17 +322,20 @@ class ViewController: UIViewController {
         
     }
     
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue"{
-            func performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+            if let destinationVC = segue.destination as? CongratsViewController{
+                destinationVC.leftNumber = number1.text!
+                destinationVC.rightNumber = number2.text!
+                
+            }
+        }
+    
+  
+
     }
-   
-    
-    
 
-   
+
+
 }
-
-
-
-
